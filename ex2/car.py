@@ -3,10 +3,18 @@ class Car:
 
     doors = (3,5)
 
-    def __init__(self, numbers_doors, colors):
+    def __init__(self, immats, numbers_doors, colors):
         self.__numbers_doors = numbers_doors
         self.__color = colors
-        self.__immat = 54766
+        self.__immat = immats
+
+    @property
+    def immat(self):
+        return self.__immat
+    @immat.setter
+    def immat(self, immats):
+        self.__immat = immats
+
 
     @property
     def numbers_doors(self):

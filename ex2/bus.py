@@ -1,11 +1,20 @@
 class Bus:
-    immat = 8467778
+
     colors = "yellow"
     doors = (2,3)
     stage = (1,2)
-    def __init__(self, numbers_doors, numbers_stage):
+    def __init__(self, immats, numbers_doors, numbers_stage):
         self.__numbers_doors = numbers_doors
         self.__numbers_stage = numbers_stage
+        self.__immat = immats
+
+    @property
+    def immat(self):
+        return self.__immat
+
+    @immat.setter
+    def immat(self, immats):
+        self.__immat = immats
 
     @property
     def numbers_doors(self):
