@@ -1,9 +1,10 @@
-class Car:
+from  vehicules import  *
 
+class Car(Vehicules):
 
-    doors = (3,5)
 
     def __init__(self, immats, numbers_doors, colors):
+        Vehicules.__init__(self)
         self.__numbers_doors = numbers_doors
         self.__color = colors
         self.__immat = immats
@@ -22,7 +23,8 @@ class Car:
 
     @numbers_doors.setter
     def numbers_doors(self, numbers_doors):
-        if numbers_doors in Car.doors:
+
+        if numbers_doors in Vehicules.doors:
             self.__numbers_doors = numbers_doors
         else:
             raise ValueError

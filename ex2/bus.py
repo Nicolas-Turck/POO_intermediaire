@@ -1,12 +1,12 @@
-class Bus:
+from vehicules import *
+class Bus(Vehicules):
 
-    colors = "yellow"
-    doors = (2,3)
-    stage = (1,2)
-    def __init__(self, immats, numbers_doors, numbers_stage):
+    def __init__(self, immats, numbers_doors, numb_stage, colors):
+        Vehicules.__init__(self)
         self.__numbers_doors = numbers_doors
-        self.__numbers_stage = numbers_stage
+        self.__numbers_stage = numb_stage
         self.__immat = immats
+        self.__color = colors
 
     @property
     def immat(self):
@@ -22,7 +22,7 @@ class Bus:
 
     @numbers_doors.setter
     def numbers_doors(self, numbers_doors):
-        if numbers_doors in Bus.doors:
+        if numbers_doors in doors:
             self.__numbers_doors = numbers_doors
         else:
             raise ValueError
@@ -32,11 +32,19 @@ class Bus:
         return self.__numbers_stage
 
     @numbers_stage.setter
-    def numbers_stage(self, numbers_stage):
-        if numbers_stage in Bus.stage:
-            self.__numbers_stage = numbers_stage
+    def numbers_stage(self, numb_stage=None):
+        if numb_stage in Vehicules.stage:
+            self.__numbers_stage = numb_stage
         else:
             raise ValueError
 
+    @property
+    def color(self):
+        return self.__color
+
+    @color.setter
+    def color(self, colors):
+        self.__color = colors
+
     def display(self):
-        print("...Bus:\nimmat:{}\ncolors:{}\nnumber doors:{}\nstage:{}".format(self.immat, self.colors, self.__numbers_doors, self.__numbers_stage) )
+        print("...Bus:\nimmat:{}\ncolors:{}\nnumber doors:{}\nstage:{}".format(self.immat, self.__color, self.__numbers_doors, self.__numbers_stage) )
