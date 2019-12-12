@@ -23,11 +23,11 @@ class Bus:
         return self.__numbers_stage
 
     @numbers_stage.setter
-    def numbers_doors(self, numbers_stage):
+    def numbers_stage(self, numbers_stage):
         if numbers_stage in Bus.stage:
             self.__numbers_stage = numbers_stage
         else:
             raise ValueError
 
     def display(self):
-        print("bus immat is {} and colors is {} number doors is {} stage is {}".format(self.immat, self.colors, self.__numbers_doors, self.__numbers_stage) )
+        print("...Bus:\nimmat:{}\ncolors:{}\nnumber doors:{}\nstage:{}".format(self.immat, self.colors, self.__numbers_doors, self.__numbers_stage) )
