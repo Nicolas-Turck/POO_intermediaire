@@ -14,8 +14,8 @@ class Customer(Person):
 
     def add_elem(self, elem):
         """method for add elem in list customer"""
-        #if other in Product.store:
-        self.basket.append(elem)
+        if elem in Product.store:
+            self.basket.append(elem)
 
     def __repr__(self):
         """display customer attributes with specials method of python """
