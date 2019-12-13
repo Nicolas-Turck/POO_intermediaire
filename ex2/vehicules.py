@@ -1,6 +1,5 @@
 class Vehicules:
-    doors = (3, 5)
-    stage = (1, 2)
-    def __init__(self):
-        doors = (3, 5)
-        stage = (1, 2)
+    """create class mother for use with class Car and Bus"""
+    def __init__(self, immats, colors):
+        self.__color = colors
+        self.__immat = immats

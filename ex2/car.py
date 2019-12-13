@@ -1,42 +1,29 @@
 from  vehicules import  *
-
+""""class for create object car with attributes 
+    and use heritage of class vehicules"""
 class Car(Vehicules):
+    doors = (3, 5)
 
-
-    def __init__(self, immats, numbers_doors, colors):
-        Vehicules.__init__(self)
-        self.__numbers_doors = numbers_doors
-        self.__color = colors
-        self.__immat = immats
-
-    @property
-    def immat(self):
-        return self.__immat
-    @immat.setter
-    def immat(self, immats):
-        self.__immat = immats
-
+    def __init__(self, nunmbers_doors, immats, colors):
+        """constructor of object and ask constructor of class vehicules"""
+        self.numbers_doors = nunmbers_doors
+        super().__init__(immats, colors)
 
     @property
     def numbers_doors(self):
+        """get attributes"""
         return self.__numbers_doors
 
     @numbers_doors.setter
     def numbers_doors(self, numbers_doors):
-
-        if numbers_doors in Vehicules.doors:
+        """verify attributes and retur it modify"""
+        if numbers_doors in  Car.doors:
             self.__numbers_doors = numbers_doors
         else:
-            raise ValueError
+            self.__numbers_doors = False
 
-    @property
-    def color(self):
-        return self.__color
 
-    @color.setter
-    def color(self, colors=None):
-        self.__color = colors
 
-    def display(self):
-        print("...Car: \nimmat: {} \ncolors: {} \nnumber doors: {}".format(self.__immat, self.__color, self.__numbers_doors) )
+
+
 
