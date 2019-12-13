@@ -1,6 +1,13 @@
 class Product:
-    def __init__(self, name, price):
+    store = {}
+
+    def __init__(self,name, price):
         """class for create items in applestore """
-        store = {}
+
         self.price = price
         self.name = name
+
+    def add_store(self, key, values):
+        """method for add items in score dict """
+        self.store.update({key: values})
+        #print(self.store)

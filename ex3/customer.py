@@ -1,18 +1,21 @@
 from person import *
 from product import *
+
 class Customer(Person):
 
 
     def __init__(self, name, first_name, years):
-        """method of constructor of constructor of attributs
+        """method  of constructor of attributs
             and ask mother class with method super()"""
         super().__init__(name, first_name, years)
         self.basket = []
         self.totals = 0
         #self.product = products
 
-    def __add__(self, other):
-        self.basket += other
+    def add_elem(self, elem):
+        """method for add elem in list customer"""
+        #if other in Product.store:
+        self.basket.append(elem)
 
     def __repr__(self):
         """display customer attributes with specials method of python """

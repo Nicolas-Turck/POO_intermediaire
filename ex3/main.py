@@ -5,11 +5,21 @@ from product import *
 
 if __name__=='__main__':
     client1 = Customer("turck", "nicos", 34)
+
     employee1 = Employee("manager", "eder", "nunes", 34)
+
     macbook = Product("macbook", 1600)
+    macbook.add_store("macbook", 1600)
     iphone = Product("iphone", 800)
+    iphone.add_store("iphone", 800)
     airpods = Product("airpods", 150)
-    client1.__add__("iphone")
-    client1.__add__("macbook")
+    airpods.add_store("airpods", 150)
+    print(Product.store)
+
+    client1.add_elem("iphone")
+
+    client1.add_elem("macbook")
+
     print(client1)
+
     print(employee1)
