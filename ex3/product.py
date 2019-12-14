@@ -8,6 +8,6 @@ class Product:
         self.name = name
 
     def add_store(self, key, values):
-        """method for add items in score dict """
+        """method for add items in store dictionnary """
         self.store.update({key: values})
-        #print(self.store)
+

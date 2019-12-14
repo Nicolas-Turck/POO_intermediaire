@@ -4,7 +4,7 @@ from customer import *
 from product import *
 
 if __name__=='__main__':
-
+    # create two person a client and employee
     client1 = Customer("turck", "nicos", 34)
     employee1 = Employee("manager", "eder", "nunes", 34)
     # create many items of store
@@ -14,9 +14,11 @@ if __name__=='__main__':
     iphone.add_store("iphone", 800)
     airpods = Product("airpods", 150)
     airpods.add_store("airpods", 150)
-    #print(Product.store)
-    # ask method for client add item in this basket
-    client1.add_elem("iphone")
-    client1.add_elem("macbook")
+    print(Product.store)
+    client1 + "airpods"
+    print(client1)
+    client1 + "iphone"
     print(client1)
     print(employee1)
+    print(employee1 >= "manager")
+    print(employee1 >= "employée")
